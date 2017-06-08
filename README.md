@@ -75,7 +75,7 @@ to the top header row, then save the spreadsheet.
                            ["Foo Widget" 100]
                            ["Bar Widget" 200]])
       sheet (select-sheet "Price List" wb)
-      header-row (first (row-seq sheet))]
+      [header-row] (row-seq sheet)]
   (do
     (set-row-style! header-row (create-cell-style! wb {:background :yellow,
                                                        :font {:bold true}}))
